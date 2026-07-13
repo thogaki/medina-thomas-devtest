@@ -1,12 +1,14 @@
 :root {
-  --navy: #6f95b7;
-  --navy-deep: #182b40;
-  --purple: #9ebbd3;
+  --pastel-light: #C5D4EB;
+  --pastel-deep: #A7AED3;
+  --navy: #A7AED3;
+  --navy-deep: #A7AED3;
+  --purple: #A7AED3;
   --gold: #f0d9a6;
   --gold-soft: #fff0c9;
   --ivory: #fffdf8;
-  --text: rgba(255,255,255,.88);
-  --line: rgba(240,217,166,.60);
+  --text: rgba(255,255,255,.90);
+  --line: rgba(240,217,166,.62);
 }
 
 * { box-sizing: border-box; }
@@ -22,9 +24,9 @@ body {
   overflow-x: hidden;
   color: var(--ivory);
   background:
-    radial-gradient(circle at 76% 14%, rgba(204,225,242,.30), transparent 30rem),
-    radial-gradient(circle at 18% 34%, rgba(159,194,222,.20), transparent 24rem),
-    linear-gradient(180deg, #8fb2cf 0%, #6f95b7 28%, #456783 58%, #29455f 78%, #182b40 100%);
+    radial-gradient(circle at 78% 12%, rgba(255,255,255,.22), transparent 28rem),
+    radial-gradient(circle at 18% 38%, rgba(255,255,255,.12), transparent 22rem),
+    linear-gradient(180deg, #C5D4EB 0%, #C5D4EB 24%, #A7AED3 72%, #A7AED3 100%);
   font-family: "Montserrat", system-ui, sans-serif;
 }
 
@@ -54,7 +56,7 @@ button { font: inherit; }
     calc(12px + env(safe-area-inset-top))
     max(18px, calc((100vw - 1040px) / 2))
     10px;
-  background: linear-gradient(180deg, rgba(36,63,88,.94), rgba(57,88,115,.62), transparent);
+  background: linear-gradient(180deg, rgba(167,174,211,.94), rgba(197,212,235,.68), transparent);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
@@ -172,7 +174,7 @@ h1 b {
   padding: 21px 24px 20px;
   border: 1px solid rgba(231,204,104,.60);
   border-radius: 24px;
-  background: linear-gradient(145deg, rgba(191,216,236,.20), rgba(31,55,79,.43));
+  background: linear-gradient(145deg, rgba(255,255,255,.24), rgba(167,174,211,.30));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 18px 48px rgba(0,0,0,.14);
 }
 
@@ -345,7 +347,7 @@ h1 b {
 
 .button-secondary {
   color: var(--ivory);
-  background: rgba(33,58,82,.54);
+  background: rgba(167,174,211,.34);
 }
 
 .calendar-note {
@@ -570,8 +572,8 @@ body.dev-locked .dev-panel {
     20px
     calc(28px + env(safe-area-inset-bottom));
   background:
-    radial-gradient(circle at 50% 18%, rgba(165,198,225,.40), transparent 35rem),
-    linear-gradient(180deg, rgba(41,69,94,.98), rgba(20,37,55,.99));
+    radial-gradient(circle at 50% 16%, rgba(255,255,255,.20), transparent 32rem),
+    linear-gradient(180deg, rgba(197,212,235,.98), rgba(167,174,211,.99));
 }
 
 .dev-login[hidden] {
@@ -583,7 +585,7 @@ body.dev-locked .dev-panel {
   padding: 36px 30px 30px;
   border: 1px solid rgba(231,204,104,.45);
   border-radius: 30px;
-  background: linear-gradient(145deg, rgba(168,201,225,.24), rgba(27,49,70,.82));
+  background: linear-gradient(145deg, rgba(255,255,255,.26), rgba(167,174,211,.54));
   box-shadow:
     0 28px 80px rgba(0,0,0,.42),
     inset 0 1px 0 rgba(255,255,255,.04);
@@ -649,7 +651,7 @@ body.dev-locked .dev-panel {
   border: 1px solid rgba(231,204,104,.50);
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(24,44,63,.48);
+  background: rgba(167,174,211,.34);
 }
 
 .dev-password-row input {
@@ -734,7 +736,7 @@ body.dev-locked .dev-panel {
   border: 1px solid rgba(231,204,104,.50);
   border-radius: 50%;
   color: var(--gold);
-  background: rgba(24,44,63,.91);
+  background: rgba(167,174,211,.88);
   cursor: pointer;
   font-size: 10px;
   font-weight: 700;
@@ -749,7 +751,7 @@ body.dev-locked .dev-panel {
   border: 1px solid rgba(231,204,104,.42);
   border-radius: 16px;
   color: rgba(255,255,255,.72);
-  background: rgba(24,44,63,.95);
+  background: rgba(167,174,211,.94);
   box-shadow: 0 12px 34px rgba(0,0,0,.30);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -798,7 +800,7 @@ body.dev-locked .dev-panel {
 .date-card,
 .button,
 .save-top {
-  box-shadow: 0 12px 36px rgba(18,37,55,.14);
+  box-shadow: 0 12px 36px rgba(91,99,145,.16);
 }
 
 .date-card {
@@ -809,4 +811,28 @@ body.dev-locked .dev-panel {
 .heart,
 .ornament i {
   filter: drop-shadow(0 0 8px rgba(240,217,166,.18));
+}
+
+
+/* V1.1.1 – Zweifarbige Pastellpalette */
+.date-card {
+  background: linear-gradient(145deg, rgba(255,255,255,.24), rgba(167,174,211,.28));
+  border-color: rgba(255,255,255,.54);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.22),
+    0 18px 48px rgba(91,99,145,.16);
+}
+
+.save-top,
+.button-secondary {
+  background: rgba(167,174,211,.32);
+  border-color: rgba(255,255,255,.52);
+}
+
+.topbar {
+  box-shadow: 0 8px 30px rgba(91,99,145,.08);
+}
+
+.countdown strong {
+  text-shadow: 0 0 14px rgba(255,240,201,.18);
 }
