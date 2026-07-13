@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#02003f">
+  <meta name="description" content="Save the Date – Medina & Thomas – 05. Juni 2027">
+  <title>Medina & Thomas | Save the Date</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="monogram" href="#start" aria-label="Zum Seitenanfang">
+      <span>M</span><i>✦</i><span>T</span>
+    </a>
+    <a class="save-top" href="#kalender">Termin speichern</a>
+  </header>
+
+  <main>
+    <section class="hero" id="start">
+      <div class="hero-inner">
+        <p class="eyebrow">SAVE THE DATE</p>
+
+        <h1>
+          <span>Medina</span>
+          <b>&amp;</b>
+          <span>Thomas</span>
+        </h1>
+
+        <div class="ornament" aria-hidden="true">
+          <span></span><i>♥</i><span></span>
+        </div>
+
+        <p class="marry">WIR HEIRATEN</p>
+
+        <div class="date-card">
+          <time datetime="2027-06-05">05. Juni 2027</time>
+          <p>Save our Date</p>
+
+          <div class="countdown" aria-label="Countdown bis zur Hochzeit">
+            <div><strong id="days">000</strong><small>TAGE</small></div>
+            <div><strong id="hours">00</strong><small>STUNDEN</small></div>
+            <div><strong id="minutes">00</strong><small>MINUTEN</small></div>
+            <div><strong id="seconds">00</strong><small>SEKUNDEN</small></div>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#botschaft" aria-label="Mehr anzeigen">
+          <span class="scroll-label">WEITER</span>
+          <span class="scroll-chevron"></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="message" id="botschaft">
+      <div class="heart" aria-hidden="true">♡</div>
+      <p>Wir freuen uns riesig, diesen besonderen Moment mit euch zu feiern.</p>
+      <p>Bitte merkt euch den Termin – alle weiteren Informationen folgen mit der Einladung.</p>
+    </section>
+
+    <section class="calendar" id="kalender">
+      <p class="section-kicker">05 · 06 · 2027</p>
+      <h2>Termin speichern</h2>
+
+      <div class="calendar-actions">
+        <a id="google-link" class="button button-primary" target="_blank" rel="noopener">Google Kalender</a>
+        <button id="ics-button" class="button button-secondary" type="button">Apple / Outlook</button>
+      </div>
+
+      <p class="calendar-note">Der Termin wird vorerst ganztägig eingetragen.</p>
+    </section>
+  </main>
+
+  <footer><span>MEDINA &amp; THOMAS</span></footer>
+  <script src="script.js?v=6"></script>
+</body>
+</html>

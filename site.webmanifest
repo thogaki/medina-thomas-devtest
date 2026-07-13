@@ -1,0 +1,9 @@
+{
+  "name": "Medina & Thomas – Save the Date",
+  "short_name": "Medina & Thomas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000080",
+  "theme_color": "#000080",
+  "icons": [{"src":"apple-touch-icon.png","sizes":"180x180","type":"image/png"}]
+}
