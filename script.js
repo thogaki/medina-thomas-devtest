@@ -110,7 +110,7 @@ let stars = [];
 let shootingStars = [];
 let dpr = Math.min(window.devicePixelRatio || 1, 2);
 let lastLaunch = 0;
-let nextLaunchIn = 4500;
+let nextLaunchIn = 4200;
 
 /*
   Der Sternenhimmel ist bewusst an euer Beziehungsdatum 06.04.2019 gekoppelt.
@@ -184,14 +184,14 @@ function drawStars(t) {
     const alpha = s.a + Math.sin(t * s.v + s.phase) * 0.2;
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(238,247,255,${Math.max(0.05, alpha)})`;
+    ctx.fillStyle = `rgba(242,248,255,${Math.max(0.06, alpha)})`;
     ctx.fill();
   }
 
   if (t - lastLaunch > nextLaunchIn) {
     launchShootingStar();
     lastLaunch = t;
-    nextLaunchIn = 5200 + random() * 5200;
+    nextLaunchIn = 4800 + random() * 5000;
   }
 
   shootingStars = shootingStars.filter((star) => {
@@ -231,7 +231,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
 }
 
 // =========================================================
-// DEVTEST LOGIN V1.1.1
+// DEVTEST LOGIN V1.1.2
 // Client-seitiger Schutz für die reine Testumgebung.
 // Nicht für sensible Daten oder einen echten Adminbereich verwenden.
 // =========================================================
