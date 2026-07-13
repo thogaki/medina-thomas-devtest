@@ -110,7 +110,7 @@ let stars = [];
 let shootingStars = [];
 let dpr = Math.min(window.devicePixelRatio || 1, 2);
 let lastLaunch = 0;
-let nextLaunchIn = 6500;
+let nextLaunchIn = 5200;
 
 /*
   Der Sternenhimmel ist bewusst an euer Beziehungsdatum 06.04.2019 gekoppelt.
@@ -184,14 +184,14 @@ function drawStars(t) {
     const alpha = s.a + Math.sin(t * s.v + s.phase) * 0.2;
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(245,229,170,${Math.max(0.05, alpha)})`;
+    ctx.fillStyle = `rgba(238,247,255,${Math.max(0.05, alpha)})`;
     ctx.fill();
   }
 
   if (t - lastLaunch > nextLaunchIn) {
     launchShootingStar();
     lastLaunch = t;
-    nextLaunchIn = 7500 + random() * 7000;
+    nextLaunchIn = 6200 + random() * 5800;
   }
 
   shootingStars = shootingStars.filter((star) => {
@@ -204,9 +204,9 @@ function drawStars(t) {
     const endY = star.y - star.length * 0.42;
 
     const gradient = ctx.createLinearGradient(star.x, star.y, endX, endY);
-    gradient.addColorStop(0, `rgba(255,246,211,${Math.max(0, star.life * 0.72)})`);
-    gradient.addColorStop(0.30, `rgba(231,204,104,${Math.max(0, star.life * 0.48)})`);
-    gradient.addColorStop(1, "rgba(255,245,205,0)");
+    gradient.addColorStop(0, `rgba(244,250,255,${Math.max(0, star.life * 0.68)})`);
+    gradient.addColorStop(0.30, `rgba(210,232,247,${Math.max(0, star.life * 0.42)})`);
+    gradient.addColorStop(1, "rgba(238,247,255,0)");
 
     ctx.beginPath();
     ctx.moveTo(star.x, star.y);
@@ -231,7 +231,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
 }
 
 // =========================================================
-// DEVTEST LOGIN V1.0.1
+// DEVTEST LOGIN V1.1.0
 // Client-seitiger Schutz für die reine Testumgebung.
 // Nicht für sensible Daten oder einen echten Adminbereich verwenden.
 // =========================================================
