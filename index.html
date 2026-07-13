@@ -10,10 +10,58 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=dev100">
 </head>
-<body>
+<body class="dev-locked">
   <canvas id="stars" aria-hidden="true"></canvas>
+
+  <section class="dev-login" id="dev-login" aria-labelledby="dev-login-title">
+    <div class="dev-login-card">
+      <div class="dev-login-monogram">M <span>✦</span> T</div>
+      <p class="dev-login-kicker">ENTWICKLUNGSUMGEBUNG</p>
+      <h1 id="dev-login-title">DevTest</h1>
+      <p class="dev-login-text">
+        Diese Seite dient ausschließlich zum Testen neuer Funktionen unserer Hochzeitswebsite.
+      </p>
+
+      <form id="dev-login-form" class="dev-login-form">
+        <label for="dev-password">Passwort</label>
+        <div class="dev-password-row">
+          <input
+            id="dev-password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Passwort eingeben"
+            required
+          >
+          <button type="button" id="toggle-password" aria-label="Passwort anzeigen">◉</button>
+        </div>
+        <button class="dev-login-button" type="submit">Anmelden</button>
+        <p class="dev-login-error" id="dev-login-error" aria-live="polite"></p>
+      </form>
+
+      <p class="dev-login-footer">Medina &amp; Thomas · DevTest · Version 1.0.0</p>
+    </div>
+  </section>
+
+  <div class="dev-badge" id="dev-badge" aria-hidden="true">
+    <span>🧪</span>
+    <strong>DEVTEST</strong>
+    <small>v1.0.0</small>
+  </div>
+
+  <aside class="dev-panel" id="dev-panel" aria-label="DevTest Informationen">
+    <button class="dev-panel-toggle" id="dev-panel-toggle" type="button" aria-expanded="false">
+      DEV
+    </button>
+    <div class="dev-panel-content">
+      <strong>DevTest</strong>
+      <span>Version: 1.0.0</span>
+      <span>Branch: devtest</span>
+      <span>Build: 13.07.2026</span>
+      <button id="dev-logout" type="button">Abmelden</button>
+    </div>
+  </aside>
 
   <header class="topbar">
     <a class="monogram" href="#start" aria-label="Zum Seitenanfang">
@@ -78,6 +126,6 @@
   </main>
 
   <footer><span>MEDINA &amp; THOMAS</span></footer>
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=dev100"></script>
 </body>
 </html>

@@ -540,3 +540,288 @@ footer {
     padding-bottom: 4px;
   }
 }
+
+
+/* =========================================================
+   DEVTEST V1.0
+   ========================================================= */
+
+body.dev-locked {
+  overflow: hidden;
+}
+
+body.dev-locked main,
+body.dev-locked header,
+body.dev-locked footer,
+body.dev-locked .dev-badge,
+body.dev-locked .dev-panel {
+  visibility: hidden;
+}
+
+.dev-login {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding:
+    calc(28px + env(safe-area-inset-top))
+    20px
+    calc(28px + env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle at 50% 18%, rgba(46,20,86,.52), transparent 35rem),
+    linear-gradient(180deg, rgba(1,0,38,.97), rgba(1,0,28,.99));
+}
+
+.dev-login[hidden] {
+  display: none;
+}
+
+.dev-login-card {
+  width: min(460px, 100%);
+  padding: 36px 30px 30px;
+  border: 1px solid rgba(231,204,104,.45);
+  border-radius: 30px;
+  background: linear-gradient(145deg, rgba(46,20,86,.30), rgba(2,0,63,.74));
+  box-shadow:
+    0 28px 80px rgba(0,0,0,.42),
+    inset 0 1px 0 rgba(255,255,255,.04);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dev-login-monogram {
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 31px;
+  letter-spacing: .16em;
+}
+
+.dev-login-monogram span {
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.dev-login-kicker {
+  margin: 28px 0 8px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .32em;
+  text-indent: .32em;
+}
+
+.dev-login h1 {
+  display: block;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 13vw, 82px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.dev-login-text {
+  margin: 22px auto 28px;
+  max-width: 340px;
+  color: rgba(255,255,255,.70);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.dev-login-form {
+  text-align: left;
+}
+
+.dev-login-form label {
+  display: block;
+  margin: 0 0 8px 4px;
+  color: rgba(255,255,255,.72);
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.dev-password-row {
+  display: grid;
+  grid-template-columns: 1fr 48px;
+  border: 1px solid rgba(231,204,104,.50);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0,0,28,.42);
+}
+
+.dev-password-row input {
+  min-width: 0;
+  height: 52px;
+  padding: 0 16px;
+  border: 0;
+  outline: 0;
+  color: var(--ivory);
+  background: transparent;
+  font: inherit;
+}
+
+.dev-password-row input::placeholder {
+  color: rgba(255,255,255,.34);
+}
+
+.dev-password-row:focus-within {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(231,204,104,.10);
+}
+
+.dev-password-row button {
+  border: 0;
+  border-left: 1px solid rgba(231,204,104,.26);
+  color: var(--gold);
+  background: transparent;
+  cursor: pointer;
+}
+
+.dev-login-button {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 16px;
+  color: #080630;
+  background: linear-gradient(120deg, #f5e4a7, #cfad50);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dev-login-button:hover,
+.dev-login-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(231,204,104,.15);
+}
+
+.dev-login-error {
+  min-height: 22px;
+  margin: 11px 0 0;
+  color: #f0b6b6;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.dev-login-footer {
+  margin: 14px 0 0;
+  color: rgba(255,255,255,.30);
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.dev-badge {
+  position: fixed;
+  top: calc(74px + env(safe-area-inset-top));
+  right: 14px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(231,204,104,.55);
+  border-radius: 999px;
+  color: var(--gold);
+  background: rgba(1,0,38,.78);
+  box-shadow: 0 8px 24px rgba(0,0,0,.24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dev-badge strong {
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.dev-badge small {
+  color: rgba(255,255,255,.48);
+  font-size: 9px;
+}
+
+.dev-panel {
+  position: fixed;
+  left: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  z-index: 45;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.dev-panel-toggle {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(231,204,104,.50);
+  border-radius: 50%;
+  color: var(--gold);
+  background: rgba(1,0,38,.88);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  box-shadow: 0 8px 24px rgba(0,0,0,.28);
+}
+
+.dev-panel-content {
+  display: none;
+  min-width: 190px;
+  padding: 14px;
+  border: 1px solid rgba(231,204,104,.42);
+  border-radius: 16px;
+  color: rgba(255,255,255,.72);
+  background: rgba(1,0,38,.92);
+  box-shadow: 0 12px 34px rgba(0,0,0,.30);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dev-panel.open .dev-panel-content {
+  display: grid;
+  gap: 6px;
+}
+
+.dev-panel-content strong {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.dev-panel-content span {
+  font-size: 10px;
+}
+
+.dev-panel-content button {
+  margin-top: 6px;
+  padding: 8px 10px;
+  border: 1px solid rgba(231,204,104,.45);
+  border-radius: 10px;
+  color: var(--ivory);
+  background: transparent;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+@media (max-width: 620px) {
+  .dev-login-card {
+    padding: 30px 22px 24px;
+    border-radius: 24px;
+  }
+
+  .dev-badge {
+    top: calc(68px + env(safe-area-inset-top));
+    right: 10px;
+    padding: 7px 9px;
+  }
+
+  .dev-panel {
+    left: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+  }
+}

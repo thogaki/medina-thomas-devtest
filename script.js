@@ -229,3 +229,83 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
 } else {
   drawStars(0);
 }
+
+
+// =========================================================
+// DEVTEST LOGIN
+// Hinweis: Client-seitiger Schutz für eine Testumgebung.
+// Nicht für sensible Daten oder einen echten Adminbereich verwenden.
+// =========================================================
+const DEV_PASSWORD_HASH = "9e529b287a788855a0fb4e0df6610936792164b7182acbf459d9ea4343394778";
+const DEV_SESSION_KEY = "medina-thomas-devtest-auth-v1";
+
+const devLogin = document.getElementById("dev-login");
+const devLoginForm = document.getElementById("dev-login-form");
+const devPassword = document.getElementById("dev-password");
+const devLoginError = document.getElementById("dev-login-error");
+const togglePassword = document.getElementById("toggle-password");
+const devPanel = document.getElementById("dev-panel");
+const devPanelToggle = document.getElementById("dev-panel-toggle");
+const devLogout = document.getElementById("dev-logout");
+
+async function sha256(value) {
+  const data = new TextEncoder().encode(value);
+  const digest = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(digest))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+function unlockDev() {
+  sessionStorage.setItem(DEV_SESSION_KEY, "1");
+  document.body.classList.remove("dev-locked");
+  devLogin.hidden = true;
+}
+
+function lockDev() {
+  sessionStorage.removeItem(DEV_SESSION_KEY);
+  document.body.classList.add("dev-locked");
+  devLogin.hidden = false;
+  devPassword.value = "";
+  devLoginError.textContent = "";
+  devPanel.classList.remove("open");
+  setTimeout(() => devPassword.focus(), 50);
+}
+
+if (sessionStorage.getItem(DEV_SESSION_KEY) === "1") {
+  unlockDev();
+} else {
+  lockDev();
+}
+
+devLoginForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  devLoginError.textContent = "";
+
+  const enteredHash = await sha256(devPassword.value);
+
+  if (enteredHash === DEV_PASSWORD_HASH) {
+    unlockDev();
+  } else {
+    devLoginError.textContent =
+      "Diese Sterne sind leider noch nicht für dich bestimmt. Bitte Passwort prüfen.";
+    devPassword.select();
+  }
+});
+
+togglePassword.addEventListener("click", () => {
+  const visible = devPassword.type === "text";
+  devPassword.type = visible ? "password" : "text";
+  togglePassword.setAttribute(
+    "aria-label",
+    visible ? "Passwort anzeigen" : "Passwort ausblenden"
+  );
+  devPassword.focus();
+});
+
+devPanelToggle.addEventListener("click", () => {
+  const open = devPanel.classList.toggle("open");
+  devPanelToggle.setAttribute("aria-expanded", String(open));
+});
+
+devLogout.addEventListener("click", lockDev);
