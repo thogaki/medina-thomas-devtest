@@ -1,6 +1,14 @@
 {
   "environment": "development",
-  "version": "2.0.0-dev.2",
+  "version": "2.0.0-dev.3",
   "domain": "devtest.medina-thomas.de",
-  "built_at": "2026-07-15T21:03:23+00:00"
+  "built_at": "2026-07-15T21:17:42+00:00",
+  "notes": [
+    "Mehr dezente Sterne",
+    "Seltene Sternschnuppen",
+    "Google Maps und Apple Karten",
+    "Hotelhinweis in Eure Rückmeldung verschoben",
+    "DEV-Build-Badge ergänzt",
+    "Verwaltungslink bleibt nur in DEV"
+  ]
 }

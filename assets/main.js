@@ -90,9 +90,32 @@ function setupRSVP() {
   });
 }
 
+
+function startShootingStars() {
+  const star = document.createElement("div");
+  star.className = "shooting-star";
+  document.body.appendChild(star);
+
+  const launch = () => {
+    const top = 70 + Math.random() * Math.min(window.innerHeight * 0.55, 420);
+    const left = window.innerWidth * (0.62 + Math.random() * 0.28);
+    star.style.top = `${top}px`;
+    star.style.left = `${left}px`;
+    star.classList.remove("active");
+    void star.offsetWidth;
+    star.classList.add("active");
+    const nextDelay = 11000 + Math.random() * 17000;
+    window.setTimeout(launch, nextDelay);
+  };
+
+  window.setTimeout(launch, 7000 + Math.random() * 6000);
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
   setInterval(updateCountdown, 1000);
   loadCurrentWeather();
   setupRSVP();
+  startShootingStars();
 });

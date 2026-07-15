@@ -18,8 +18,8 @@
   <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/gate.css?v=2002">
-  <link rel="stylesheet" href="assets/styles.css?v=2002">
+  <link rel="stylesheet" href="assets/gate.css?v=2003">
+  <link rel="stylesheet" href="assets/styles.css?v=2003">
 </head>
 <body>
 
@@ -38,10 +38,11 @@
 
 <div class="stars" aria-hidden="true"></div>
 <div class="site">
+<a class="dev-badge" href="build.json" target="_blank" rel="noopener" aria-label="Build-Informationen öffnen"><span>DEV</span><strong>v2.0.0-dev.3</strong></a>
 <header class="topbar">
   <a class="brand" href="#start">M&amp;T</a>
   <nav class="nav">
-    <a href="#ablauf">Ablauf</a><a href="#location">Location</a><a href="#wetter">Wetter</a><a href="#rsvp">RSVP</a><a href="mt-verwaltung/">Verwaltung</a>
+    <a href="#ablauf">Ablauf</a><a href="#location">Location</a><a href="#wetter">Wetter</a><a href="#rsvp">Eure Rückmeldung</a><a href="mt-verwaltung/">Verwaltung</a>
   </nav>
 </header>
 <main>
@@ -72,12 +73,9 @@
     <div class="card map-wrap">
       <iframe title="Karte zum Hotel Gasthof Huber" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=Hotel%20Gasthof%20Huber%20Oberndorf%2011%2085560%20Ebersberg&output=embed"></iframe>
-      <div class="map-info">
-        <h3>Ankommen & übernachten</h3>
-        <p>Die Feier findet direkt im Hotel Gasthof Huber statt. Übernachtungsmöglichkeiten sind vor Ort vorhanden und können über das RSVP angefragt werden.</p>
-        <div class="location-actions">
-          <a class="ghost" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gasthof+Huber+Oberndorf+11+85560+Ebersberg" target="_blank" rel="noopener">Route in Google Maps</a>
-        </div>
+      <div class="map-actions">
+        <a class="ghost" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gasthof+Huber+Oberndorf+11+85560+Ebersberg" target="_blank" rel="noopener">Route in Google Maps</a>
+        <a class="ghost" href="https://maps.apple.com/?q=Hotel+Gasthof+Huber&address=Oberndorf+11,+85560+Ebersberg" target="_blank" rel="noopener">Route in Apple Karten</a>
       </div>
     </div>
   </section>
@@ -113,9 +111,9 @@
 
   <section id="rsvp">
     <div class="section-head">
-      <p class="kicker">EURE ANTWORT</p>
-      <h2>Seid ihr dabei?</h2>
-      <p>Bitte gebt uns kurz Bescheid, ob wir mit euch feiern dürfen und ob ihr ein Hotelzimmer benötigt.</p>
+      <p class="kicker">EURE RÜCKMELDUNG</p>
+      <h2>Gebt uns bitte Bescheid</h2>
+      <p>Bitte gebt uns kurz Bescheid, ob wir mit euch feiern dürfen. Falls ihr direkt vor Ort übernachten möchtet, könnt ihr hier zugleich ein Hotelzimmer für die gewünschte Personenzahl anfragen.</p>
     </div>
     <div class="rsvp-wrap">
       <form id="rsvp-form" class="card">
@@ -151,7 +149,7 @@
 </main>
 <footer>MEDINA &amp; THOMAS · 05. JUNI 2027</footer>
 </div>
-<script src="assets/gate.js?v=2002"></script>
-<script src="assets/main.js?v=2002"></script>
+<script src="assets/gate.js?v=2003"></script>
+<script src="assets/main.js?v=2003"></script>
 </body>
 </html>
