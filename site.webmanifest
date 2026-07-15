@@ -1,11 +1,11 @@
 {
-  "name": "Medina & Thomas – Save the Date DEV",
+  "name": "Medina & Thomas – DEV",
   "short_name": "Medina & Thomas",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#060C23",
-  "theme_color": "#141C43",
+  "background_color": "#203757",
+  "theme_color": "#203757",
   "icons": [
     {
       "src": "android-chrome-192x192.png",

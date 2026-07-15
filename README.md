@@ -1,17 +1,11 @@
-# Medina & Thomas – DEV
+# DEV – Medina & Thomas
 
-## Version
-**1.2.0-dev.3**
+Version: **1.2.0-dev.4**  
+Domain: **devtest.medina-thomas.de**
 
-Enthalten ist das vollständige Icon-Set für:
+## DEV-Passwort
+`MedinaThomas2027!`
 
-- Browser-Tab und Lesezeichen (`favicon.ico`, SVG und PNG)
-- iPhone-Homebildschirm (`apple-touch-icon.png`)
-- Android/PWA (`android-chrome-192x192.png`, `android-chrome-512x512.png`)
-- Web-App-Manifest
-- DEV-CNAME: `dev.medina-thomas.de`
+Hinweis: Die enthaltene Passwortabfrage läuft im Browser und schützt nur vor zufälligem Zugriff. Für echte Zugriffssicherheit sollte zusätzlich Cloudflare Access verwendet werden.
 
-## Upload
-Den gesamten Inhalt dieser ZIP direkt in das Hauptverzeichnis des DEV-Repositories hochladen und vorhandene Dateien ersetzen.
-
-Nach dem Upload kann es durch Browser-Cache etwas dauern, bis das neue Symbol sichtbar wird. Lesezeichen oder Homebildschirm-Verknüpfungen gegebenenfalls einmal löschen und neu hinzufügen.
+Den Inhalt dieses Ordners direkt in das DEV-Repository hochladen und vorhandene Dateien ersetzen.

@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="build" content="dev-1.2.0-dev.4">
   <meta name="theme-color" content="#1F3150">
   <meta name="description" content="Save the Date – Medina & Thomas – 05. Juni 2027">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta property="og:title" content="Medina & Thomas | Save the Date">
   <meta property="og:description" content="05. Juni 2027 – Wir heiraten.">
-  <meta property="og:image" content="social-preview.png">
+  <meta property="og:image" content="https://devtest.medina-thomas.de/social-preview.png">
   <meta property="og:type" content="website">
-<title>Medina & Thomas | DEV Preview</title>
+<title>Medina & Thomas | DEV</title>
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
@@ -23,8 +24,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=112">
+  <link rel="stylesheet" href="dev-lock.css?v=1204">
 </head>
 <body>
+
+  <div id="dev-lock" role="dialog" aria-modal="true" aria-labelledby="dev-lock-title">
+    <form class="dev-lock-card" id="dev-lock-form">
+      <div class="dev-lock-logo">M&amp;T</div>
+      <h1 id="dev-lock-title">DEV Vorschau</h1>
+      <p>Diese Version ist noch nicht öffentlich freigegeben.</p>
+      <input id="dev-password" type="password" autocomplete="current-password" placeholder="Passwort" aria-label="Passwort" required>
+      <button type="submit">Vorschau öffnen</button>
+      <p class="dev-lock-error" id="dev-lock-error" aria-live="polite"></p>
+    </form>
+  </div>
+
   <canvas id="stars" aria-hidden="true"></canvas>
 
   <header class="topbar">
@@ -91,5 +105,6 @@
 
   <footer><span>MEDINA &amp; THOMAS</span></footer>
   <script src="script.js?v=112"></script>
+  <script src="dev-lock.js?v=1204"></script>
 </body>
 </html>
