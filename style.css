@@ -886,234 +886,54 @@ body.dev-locked .dev-panel {
 }
 
 
-
-
-/* =========================================================
-   V1.1.4 – Champagne Elegance
-   ========================================================= */
-
-:root {
-  --champagne: #EFE7DA;
-  --champagne-light: #F8F4ED;
-  --champagne-deep: #E5DAC9;
-  --ink: #2E2B28;
-  --ink-soft: rgba(46,43,40,.76);
-  --gold: #A88B5A;
-  --gold-soft: #C7B08B;
-  --ivory: #FFFDFC;
-  --text: rgba(46,43,40,.78);
-  --line: rgba(168,139,90,.38);
+/* V1.1.3 – Champagne Background */
+:root{
+  --champagne:#EFE7DA;
+  --ivory:#2b2b2b;
+  --text:rgba(43,43,43,.82);
 }
 
-html {
-  background: var(--champagne);
+html{
+  background:var(--champagne)!important;
 }
 
-body {
-  color: var(--ink);
+body{
+  color:#2b2b2b!important;
   background:
-    radial-gradient(circle at 18% 12%, rgba(255,255,255,.78), transparent 25rem),
-    radial-gradient(circle at 82% 28%, rgba(255,255,255,.36), transparent 28rem),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,.025) 0,
-      rgba(255,255,255,.025) 1px,
-      rgba(0,0,0,.012) 1px,
-      rgba(0,0,0,.012) 2px
-    ),
-    linear-gradient(180deg, var(--champagne-light) 0%, var(--champagne) 44%, var(--champagne-deep) 100%) !important;
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,.70), transparent 30rem),
+    radial-gradient(circle at 80% 75%, rgba(255,255,255,.40), transparent 28rem),
+    linear-gradient(180deg,#f7f3ec 0%, #EFE7DA 40%, #e8dfd1 100%) !important;
 }
 
-#stars {
-  opacity: .28;
-  mix-blend-mode: multiply;
+.topbar{
+  background:linear-gradient(180deg, rgba(239,231,218,.96), rgba(239,231,218,.82), transparent)!important;
 }
 
-.topbar {
-  background:
-    linear-gradient(180deg, rgba(239,231,218,.97), rgba(239,231,218,.86), rgba(239,231,218,0)) !important;
-  box-shadow: 0 8px 32px rgba(86,67,42,.08);
+.date-card{
+  background:rgba(255,255,255,.55)!important;
+  border-color:rgba(160,140,110,.35)!important;
 }
 
-.monogram,
-.eyebrow,
-.marry,
-.section-kicker,
-.ornament,
-.heart,
-.date-card > p,
-.dev-login-monogram,
-.dev-login-kicker {
-  color: var(--gold) !important;
+.save-top,
+.button-secondary{
+  background:rgba(255,255,255,.55)!important;
 }
 
-.save-top {
-  color: var(--ink);
-  background: rgba(255,255,255,.48) !important;
-  border-color: rgba(168,139,90,.34) !important;
-  box-shadow: 0 8px 24px rgba(86,67,42,.08);
+.button-primary{
+  background:#EFE7DA!important;
+  color:#2b2b2b!important;
 }
 
-h1 span,
-.calendar h2,
-.date-card time {
-  color: var(--ink);
-  text-shadow: 0 3px 14px rgba(86,67,42,.08);
-}
-
-.ornament span {
-  background: linear-gradient(90deg, transparent, var(--gold)) !important;
-}
-.ornament span:last-child {
-  background: linear-gradient(90deg, var(--gold), transparent) !important;
-}
-
-.date-card {
-  background:
-    linear-gradient(145deg, rgba(255,255,255,.72), rgba(255,255,255,.42)) !important;
-  border-color: rgba(168,139,90,.28) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.82),
-    0 22px 60px rgba(86,67,42,.13) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-.countdown div {
-  border-left-color: rgba(168,139,90,.24);
-}
-
-.countdown strong {
-  color: var(--gold);
-  text-shadow: none;
-}
-
-.countdown small,
-.scroll-label {
-  color: rgba(46,43,40,.58);
-}
-
-.scroll-chevron {
-  border-color: var(--gold);
-  filter: drop-shadow(0 0 6px rgba(168,139,90,.18));
-}
-
-.message p {
-  color: var(--ink-soft) !important;
-  text-shadow: none;
-}
-
+.message p,
 .calendar-note,
-footer {
-  color: rgba(46,43,40,.44) !important;
-  text-shadow: none;
+footer{
+  color:#3b3b3b!important;
 }
 
-.button {
-  border-color: rgba(168,139,90,.46);
-  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+.dev-login{
+  background:linear-gradient(180deg,#f7f3ec,#EFE7DA)!important;
 }
 
-.button:hover,
-.button:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(86,67,42,.12);
-}
-
-.button-primary {
-  color: var(--ivory) !important;
-  background: linear-gradient(120deg, #A88B5A, #C0A377) !important;
-}
-
-.button-secondary {
-  color: var(--ink);
-  background: rgba(255,255,255,.48) !important;
-  border-color: rgba(168,139,90,.34) !important;
-}
-
-.dev-login {
-  background:
-    radial-gradient(circle at 50% 10%, rgba(255,255,255,.66), transparent 28rem),
-    linear-gradient(180deg, var(--champagne-light), var(--champagne)) !important;
-}
-
-.dev-login-card {
-  background:
-    linear-gradient(145deg, rgba(255,255,255,.78), rgba(255,255,255,.46)) !important;
-  border-color: rgba(168,139,90,.28);
-  box-shadow:
-    0 28px 70px rgba(86,67,42,.18),
-    inset 0 1px 0 rgba(255,255,255,.84);
-}
-
-.dev-login h1,
-.dev-login-text,
-.dev-login-form label,
-.dev-login-footer {
-  color: var(--ink) !important;
-}
-
-.dev-login-text {
-  color: rgba(46,43,40,.66) !important;
-}
-
-.dev-password-row {
-  background: rgba(255,255,255,.60);
-  border-color: rgba(168,139,90,.28);
-}
-
-.dev-password-row input {
-  color: var(--ink);
-}
-
-.dev-password-row input::placeholder {
-  color: rgba(46,43,40,.34);
-}
-
-.dev-password-row button {
-  color: var(--gold);
-  border-left-color: rgba(168,139,90,.20);
-}
-
-.dev-login-button {
-  color: var(--ivory);
-  background: linear-gradient(120deg, #A88B5A, #C0A377);
-}
-
-.dev-panel-toggle,
-.dev-panel-content {
-  background: rgba(255,253,250,.92) !important;
-  color: var(--ink);
-  border-color: rgba(168,139,90,.32);
-}
-
-.dev-panel-content {
-  color: rgba(46,43,40,.72);
-}
-
-.dev-panel-content button {
-  color: var(--ink);
-  border-color: rgba(168,139,90,.34);
-}
-
-.reveal-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .8s ease, transform .8s ease;
-}
-
-.reveal-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (max-width: 620px) {
-  .hero {
-    padding-top: calc(86px + env(safe-area-inset-top));
-  }
-
-  .date-card {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+.dev-login-card{
+  background:rgba(255,255,255,.72)!important;
 }

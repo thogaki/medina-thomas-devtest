@@ -184,7 +184,7 @@ function drawStars(t) {
     const alpha = s.a + Math.sin(t * s.v + s.phase) * 0.2;
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(168,139,90,${Math.max(0.04, alpha * 0.42)})`;
+    ctx.fillStyle = `rgba(242,248,255,${Math.max(0.06, alpha)})`;
     ctx.fill();
   }
 
@@ -204,9 +204,9 @@ function drawStars(t) {
     const endY = star.y - star.length * 0.42;
 
     const gradient = ctx.createLinearGradient(star.x, star.y, endX, endY);
-    gradient.addColorStop(0, `rgba(168,139,90,${Math.max(0, star.life * 0.46)})`);
-    gradient.addColorStop(0.30, `rgba(199,176,139,${Math.max(0, star.life * 0.30)})`);
-    gradient.addColorStop(1, "rgba(168,139,90,0)");
+    gradient.addColorStop(0, `rgba(244,250,255,${Math.max(0, star.life * 0.68)})`);
+    gradient.addColorStop(0.30, `rgba(210,232,247,${Math.max(0, star.life * 0.42)})`);
+    gradient.addColorStop(1, "rgba(238,247,255,0)");
 
     ctx.beginPath();
     ctx.moveTo(star.x, star.y);
@@ -231,7 +231,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
 }
 
 // =========================================================
-// DEVTEST LOGIN V1.1.4
+// DEVTEST LOGIN V1.1.3
 // Client-seitiger Schutz für die reine Testumgebung.
 // Nicht für sensible Daten oder einen echten Adminbereich verwenden.
 // =========================================================
@@ -299,21 +299,3 @@ devPanelToggle.addEventListener("click", () => {
 });
 
 devLogout.addEventListener("click", lockDev);
-
-
-// V1.1.4 – dezente Scroll-Reveals
-const revealSections = document.querySelectorAll(".reveal-section");
-
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.14 });
-
-  revealSections.forEach((section) => revealObserver.observe(section));
-} else {
-  revealSections.forEach((section) => section.classList.add("visible"));
-}
