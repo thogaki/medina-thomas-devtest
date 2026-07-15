@@ -1,0 +1,14 @@
+{
+  "environment": "development",
+  "version": "2.1.0-dev.2",
+  "domain": "devtest.medina-thomas.de",
+  "built_at": "2026-07-15T21:51:46+00:00",
+  "notes": [
+    "Admin-Seite vollständig repariert",
+    "Echter Supabase-Login wird immer angezeigt, solange keine gültige Sitzung besteht",
+    "Öffentliches RSVP verwendet bewusst keine gespeicherte Admin-Sitzung",
+    "Supabase-SQL-Fix für Grants und RLS enthalten",
+    "Mobile Navigation nochmals abgesichert",
+    "DEV zeigt den konkreten Supabase-Fehler an"
+  ]
+}
