@@ -1,14 +1,16 @@
 {
   "environment": "development",
-  "version": "2.0.0-dev.3",
+  "version": "2.0.0-dev.4",
   "domain": "devtest.medina-thomas.de",
-  "built_at": "2026-07-15T21:17:42+00:00",
+  "built_at": "2026-07-15T21:27:06+00:00",
   "notes": [
-    "Mehr dezente Sterne",
-    "Seltene Sternschnuppen",
-    "Google Maps und Apple Karten",
-    "Hotelhinweis in Eure Rückmeldung verschoben",
-    "DEV-Build-Badge ergänzt",
-    "Verwaltungslink bleibt nur in DEV"
+    "Mehr Sterne analog PROD",
+    "Sternschnuppen alle ca. 6–12 Sekunden",
+    "Mobile Navigation mit Hamburger-Menü",
+    "Neutrale Rückmeldung in Einzahl",
+    "Name statt Vor- und Nachname",
+    "Kalenderbereich mit Google, Outlook, Apple und ICS",
+    "Kalendereintrag mit Location, Startzeit 14:30 und Ende 00:30",
+    "Erinnerungen 1 Woche und 1 Tag vorher"
   ]
 }

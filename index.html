@@ -18,8 +18,8 @@
   <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/gate.css?v=2003">
-  <link rel="stylesheet" href="assets/styles.css?v=2003">
+  <link rel="stylesheet" href="assets/gate.css?v=2004">
+  <link rel="stylesheet" href="assets/styles.css?v=2004">
 </head>
 <body>
 
@@ -41,8 +41,9 @@
 <a class="dev-badge" href="build.json" target="_blank" rel="noopener" aria-label="Build-Informationen öffnen"><span>DEV</span><strong>v2.0.0-dev.3</strong></a>
 <header class="topbar">
   <a class="brand" href="#start">M&amp;T</a>
-  <nav class="nav">
-    <a href="#ablauf">Ablauf</a><a href="#location">Location</a><a href="#wetter">Wetter</a><a href="#rsvp">Eure Rückmeldung</a><a href="mt-verwaltung/">Verwaltung</a>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  <nav class="nav" id="main-nav">
+    <a href="#ablauf">Ablauf</a><a href="#location">Location</a><a href="#wetter">Wetter</a><a href="#rsvp">Eure Rückmeldung</a><a href="#kalender">Termin speichern</a><a href="mt-verwaltung/">Verwaltung</a>
   </nav>
 </header>
 <main>
@@ -109,6 +110,37 @@
     </div>
   </section>
 
+
+  <section id="kalender">
+    <div class="section-head">
+      <p class="kicker">NICHT VERGESSEN</p>
+      <h2>Termin speichern</h2>
+      <p>Speichert euch unsere Hochzeit direkt im Kalender – inklusive Uhrzeit, Location und Erinnerungen.</p>
+    </div>
+    <div class="calendar-grid">
+      <a class="calendar-card" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hochzeit%20von%20Medina%20%26%20Thomas&dates=20270605T123000Z/20270605T223000Z&details=Wir%20freuen%20uns%20sehr%2C%20gemeinsam%20mit%20euch%20unsere%20Hochzeit%20zu%20feiern.%0A%0AHotel%20Gasthof%20Huber%0AOberndorf%2011%0A85560%20Ebersberg%0A%0AWeitere%20Informationen%3A%20https%3A//medina-thomas.de&location=Hotel%20Gasthof%20Huber%2C%20Oberndorf%2011%2C%2085560%20Ebersberg" target="_blank" rel="noopener">
+        <span class="calendar-symbol">G</span>
+        <strong>Google Kalender</strong>
+        <small>Termin direkt hinzufügen</small>
+      </a>
+      <a class="calendar-card" href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Hochzeit%20von%20Medina%20%26%20Thomas&startdt=2027-06-05T14%3A30%3A00%2B02%3A00&enddt=2027-06-06T00%3A30%3A00%2B02%3A00&body=Wir%20freuen%20uns%20sehr%2C%20gemeinsam%20mit%20euch%20unsere%20Hochzeit%20zu%20feiern.%0A%0AHotel%20Gasthof%20Huber%0AOberndorf%2011%0A85560%20Ebersberg%0A%0AWeitere%20Informationen%3A%20https%3A//medina-thomas.de&location=Hotel%20Gasthof%20Huber%2C%20Oberndorf%2011%2C%2085560%20Ebersberg" target="_blank" rel="noopener">
+        <span class="calendar-symbol">O</span>
+        <strong>Outlook</strong>
+        <small>Termin direkt hinzufügen</small>
+      </a>
+      <a class="calendar-card" href="medina-thomas-hochzeit-05-06-2027.ics" download>
+        <span class="calendar-symbol"></span>
+        <strong>Apple Kalender</strong>
+        <small>ICS-Datei herunterladen</small>
+      </a>
+      <a class="calendar-card" href="medina-thomas-hochzeit-05-06-2027.ics" download>
+        <span class="calendar-symbol">ICS</span>
+        <strong>ICS herunterladen</strong>
+        <small>Für weitere Kalender-Apps</small>
+      </a>
+    </div>
+  </section>
+
   <section id="rsvp">
     <div class="section-head">
       <p class="kicker">EURE RÜCKMELDUNG</p>
@@ -118,11 +150,11 @@
     <div class="rsvp-wrap">
       <form id="rsvp-form" class="card">
         <div class="choice-grid">
-          <div class="choice"><input type="radio" name="attendance" value="yes" id="attend-yes"><label for="attend-yes">Wir sind sehr gerne dabei</label></div>
-          <div class="choice"><input type="radio" name="attendance" value="no" id="attend-no"><label for="attend-no">Leider können wir nicht teilnehmen</label></div>
+          <div class="choice"><input type="radio" name="attendance" value="yes" id="attend-yes"><label for="attend-yes">Ich bin dabei</label></div>
+          <div class="choice"><input type="radio" name="attendance" value="no" id="attend-no"><label for="attend-no">Ich kann leider nicht teilnehmen</label></div>
         </div>
         <div class="form-grid">
-          <div class="field full"><label for="name">Vor- und Nachname</label><input id="name" name="name" required></div>
+          <div class="field full"><label for="name">Name</label><input id="name" name="name" required></div>
           <div id="attending-fields" class="field full hidden">
             <div class="form-grid">
               <div class="field"><label for="persons">Anzahl der Personen</label><select id="persons" name="persons"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
@@ -149,7 +181,7 @@
 </main>
 <footer>MEDINA &amp; THOMAS · 05. JUNI 2027</footer>
 </div>
-<script src="assets/gate.js?v=2003"></script>
-<script src="assets/main.js?v=2003"></script>
+<script src="assets/gate.js?v=2004"></script>
+<script src="assets/main.js?v=2004"></script>
 </body>
 </html>

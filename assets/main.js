@@ -104,11 +104,37 @@ function startShootingStars() {
     star.classList.remove("active");
     void star.offsetWidth;
     star.classList.add("active");
-    const nextDelay = 11000 + Math.random() * 17000;
+    const nextDelay = 6000 + Math.random() * 6000;
     window.setTimeout(launch, nextDelay);
   };
 
-  window.setTimeout(launch, 7000 + Math.random() * 6000);
+  window.setTimeout(launch, 3500 + Math.random() * 3500);
+}
+
+
+
+function setupMobileMenu() {
+  const button = document.getElementById("menu-toggle");
+  const nav = document.getElementById("main-nav");
+  if (!button || !nav) return;
+
+  const close = () => {
+    button.classList.remove("active");
+    nav.classList.remove("open");
+    button.setAttribute("aria-expanded", "false");
+  };
+
+  button.addEventListener("click", () => {
+    const open = !nav.classList.contains("open");
+    nav.classList.toggle("open", open);
+    button.classList.toggle("active", open);
+    button.setAttribute("aria-expanded", String(open));
+  });
+
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", close));
+  document.addEventListener("click", event => {
+    if (!nav.contains(event.target) && !button.contains(event.target)) close();
+  });
 }
 
 
@@ -118,4 +144,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadCurrentWeather();
   setupRSVP();
   startShootingStars();
+  setupMobileMenu();
 });
