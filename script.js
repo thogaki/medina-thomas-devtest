@@ -231,7 +231,7 @@ if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
 }
 
 // =========================================================
-// DEVTEST LOGIN V1.1.2
+// DEVTEST LOGIN V1.1.3
 // Client-seitiger Schutz für die reine Testumgebung.
 // Nicht für sensible Daten oder einen echten Adminbereich verwenden.
 // =========================================================
