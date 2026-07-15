@@ -1,16 +1,15 @@
-# Medina & Thomas – Save the Date
+# Medina & Thomas – DEV Preview
 
-## Finale Version
-**V1.1.2 – Deep Pastel Night**
+## Version
+**1.2.0-dev.2**
 
-Diese ZIP ist direkt für den Upload in das GitHub-Repository vorbereitet.
+Diese Version ist ausschließlich für das separate DEV-Repository vorgesehen.
 
-## Enthalten
-- finale Website-Dateien
-- farblich passende Favicons und Apple-Touch-Icon
-- Social-Preview im Design von V1.1.2
-- Kalenderdatei
-- `robots.txt` und `noindex` zur Reduzierung der Auffindbarkeit
+Wichtig:
+- Keine `CNAME`-Datei enthalten
+- GitHub Pages unter `Settings → Pages`
+- Quelle: `Deploy from a branch`
+- Branch: `main`
+- Ordner: `/(root)`
 
-## GitHub-Upload
-Den Inhalt der ZIP in das Repository hochladen und vorhandene Dateien ersetzen.
+Die Dateien müssen direkt im Hauptverzeichnis des Repositories liegen.
