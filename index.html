@@ -3,8 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#02003f">
+  <meta name="theme-color" content="#1F3150">
   <meta name="description" content="Save the Date – Medina & Thomas – 05. Juni 2027">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta property="og:title" content="Medina & Thomas | Save the Date">
+  <meta property="og:description" content="05. Juni 2027 – Wir heiraten.">
+  <meta property="og:image" content="https://medina-thomas.de/social-preview.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <title>Medina & Thomas | Save the Date</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,50 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=112">
 </head>
-<body class="dev-locked">
+<body>
   <canvas id="stars" aria-hidden="true"></canvas>
-
-  <section class="dev-login" id="dev-login" aria-labelledby="dev-login-title">
-    <div class="dev-login-card">
-      <div class="dev-login-monogram">M <span>✦</span> T</div>
-      <p class="dev-login-kicker">ENTWICKLUNGSUMGEBUNG</p>
-      <h1 id="dev-login-title">DevTest</h1>
-      <p class="dev-login-text">
-        Diese Seite dient ausschließlich zum Testen neuer Funktionen unserer Hochzeitswebsite.
-      </p>
-
-      <form id="dev-login-form" class="dev-login-form">
-        <label for="dev-password">Passwort</label>
-        <div class="dev-password-row">
-          <input
-            id="dev-password"
-            type="password"
-            autocomplete="current-password"
-            placeholder="Passwort eingeben"
-            required
-          >
-          <button type="button" id="toggle-password" aria-label="Passwort anzeigen">◉</button>
-        </div>
-        <button class="dev-login-button" type="submit">Anmelden</button>
-        <p class="dev-login-error" id="dev-login-error" aria-live="polite"></p>
-      </form>
-
-      <p class="dev-login-footer">Medina &amp; Thomas · DevTest · Version 1.1.2</p>
-    </div>
-  </section>
-
-  <aside class="dev-panel" id="dev-panel" aria-label="DevTest Informationen">
-    <button class="dev-panel-toggle" id="dev-panel-toggle" type="button" aria-expanded="false">
-      DEV
-    </button>
-    <div class="dev-panel-content">
-      <strong>DevTest</strong>
-      <span>Version: 1.1.2</span>
-      <span>Branch: devtest</span>
-      <span>Build: 13.07.2026 · 22:30</span>
-      <button id="dev-logout" type="button">Abmelden</button>
-    </div>
-  </aside>
 
   <header class="topbar">
     <a class="monogram" href="#start" aria-label="Zum Seitenanfang">
