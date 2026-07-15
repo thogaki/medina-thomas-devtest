@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#203757">
+  <title>M&T Verwaltung | DEV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/gate.css?v=2002"><link rel="stylesheet" href="../assets/admin.css?v=2002">
+</head>
+<body>
+
+<div id="dev-lock" role="dialog" aria-modal="true" aria-labelledby="dev-lock-title">
+  <form class="dev-lock-card" id="dev-lock-form">
+    <div class="dev-lock-logo">M&amp;T</div>
+    <p class="dev-lock-kicker">PRIVATE PREVIEW</p>
+    <h1 id="dev-lock-title">DEV-Bereich</h1>
+    <p class="dev-lock-copy">Bitte gib das Passwort ein, um die Einladungsvorschau zu öffnen.</p>
+    <label class="sr-only" for="dev-password">Passwort</label>
+    <input id="dev-password" type="password" autocomplete="current-password" placeholder="Passwort" required>
+    <button type="submit">Vorschau öffnen</button>
+    <div class="dev-lock-error" id="dev-lock-error" aria-live="polite"></div>
+  </form>
+</div>
+
+<main class="admin">
+  <div class="head">
+    <div><h1>MT-Verwaltung</h1><p>DEV-Dashboard für RSVP-Rückmeldungen</p></div>
+    <a class="back" href="../">Zur Einladung</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong id="count-all">0</strong><span>Antworten</span></div>
+    <div class="stat"><strong id="count-yes">0</strong><span>Zusagen</span></div>
+    <div class="stat"><strong id="count-no">0</strong><span>Absagen</span></div>
+    <div class="stat"><strong id="count-persons">0</strong><span>Personen gesamt</span></div>
+  </div>
+  <section class="panel">
+    <div class="panel-head"><h2>Gästeliste</h2><div class="actions"><button id="export">CSV exportieren</button><button id="clear">DEV-Daten löschen</button></div></div>
+    <table><thead><tr><th>Name</th><th>Antwort</th><th>Personen</th><th>Hotel</th><th>Hotelpers.</th><th>Hotelhinweis</th><th>Nachricht</th><th>Datum</th></tr></thead><tbody id="rows"></tbody></table>
+  </section>
+</main>
+<script src="../assets/gate.js?v=2002"></script><script src="../assets/admin.js?v=2002"></script>
+</body>
+</html>
