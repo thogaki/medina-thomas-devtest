@@ -1,0 +1,18 @@
+{
+  "environment": "development",
+  "version": "2.1.0-dev.1",
+  "domain": "devtest.medina-thomas.de",
+  "built_at": "2026-07-15T21:43:57+00:00",
+  "notes": [
+    "RSVP speichert zentral in Supabase",
+    "Adminbereich mit echtem Supabase-Login",
+    "Live-Dashboard und CSV-Export",
+    "Mobiles Dropdown-Menü mit korrigiertem Z-Index"
+  ],
+  "supabase": {
+    "enabled": true,
+    "project_url": "https://gqsiiftihedavogukazb.supabase.co",
+    "table": "rsvp_responses",
+    "admin_email": "thomasgabrielk@gmail.com"
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#203757">
+  <title>M&T Verwaltung | DEV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/admin.css?v=2101">
+</head>
+<body>
+
+<div class="stats">
+      <div class="stat"><strong id="count-all">0</strong><span>Antworten</span></div>
+      <div class="stat"><strong id="count-yes">0</strong><span>Zusagen</span></div>
+      <div class="stat"><strong id="count-no">0</strong><span>Absagen</span></div>
+      <div class="stat"><strong id="count-persons">0</strong><span>Personen gesamt</span></div>
+    </div>
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Gästeliste</h2>
+        <div class="actions">
+          <button id="refresh">Aktualisieren</button>
+          <button id="export">CSV exportieren</button>
+        </div>
+      </div>
+      <div class="admin-status" id="admin-status"></div>
+      <table>
+        <thead><tr><th>Name</th><th>Antwort</th><th>Personen</th><th>Hotel</th><th>Hotelpers.</th><th>Hotelhinweis</th><th>Nachricht</th><th>Datum</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </section>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="../assets/config.js?v=2101"></script><script src="../assets/admin.js?v=2101"></script>
+</body>
+</html>
