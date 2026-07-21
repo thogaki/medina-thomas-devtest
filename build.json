@@ -1,8 +1,0 @@
-{
-  "environment": "development",
-  "version": "2.1.1-dev.2",
-  "build": "2026-07-21",
-  "branch": "devtest",
-  "domain": "devtest.medina-thomas.de",
-  "description": "Mobiler Seitenstart, Location-Layout, Hochzeitswetter, Gästeinfos und persönliche RSVP-Bestätigung"
-}
