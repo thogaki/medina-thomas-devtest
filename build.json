@@ -1,8 +1,0 @@
-{
-  "environment": "development",
-  "version": "2.1.1-dev.3",
-  "build": "2026-07-21",
-  "branch": "devtest",
-  "domain": "devtest.medina-thomas.de",
-  "description": "Header ergänzt, Location und Wetter vereinheitlicht, Gästeinfos neu geordnet und Hotelkosten kontextbezogen"
-}
