@@ -1,0 +1,8 @@
+{
+  "environment": "development",
+  "version": "2.1.1-dev.4",
+  "build": "2026-07-21",
+  "branch": "devtest",
+  "domain": "devtest.medina-thomas.de",
+  "description": "Zimmerhinweis präzisiert, Formularsprache neutralisiert und Hotel-Personenzahl gekoppelt"
+}
